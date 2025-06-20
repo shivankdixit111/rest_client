@@ -20,6 +20,6 @@ export async function GET(req: NextRequest) {
       return NextResponse.json(response[0], {status: 200})
     } catch(error) {
         console.log(error)
-      return NextResponse.json({message: "Server error"}, {status: 400})
+      return NextResponse.json({message: error}, {status: 400})
     }
 }
