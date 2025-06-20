@@ -48,6 +48,7 @@ export default function Home() {
       });
 
       const data = await res.json();
+      console.log('req is ', data)
       setResponse(JSON.stringify(data, null, 2));
       setLoading(false);
       setRefreshHistory(prev => !prev);

@@ -31,6 +31,7 @@ const DataContext = ({children}: {children: ReactNode}) => {
         })
         setLoading(false); 
         const data = await res.json();   
+        console.log('history data is ', data)
         setHistoryData(Array.isArray(data) ? data : [])
       } 
 
