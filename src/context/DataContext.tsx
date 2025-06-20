@@ -31,7 +31,7 @@ const DataContext = ({children}: {children: ReactNode}) => {
         })
         setLoading(false); 
         const data = await res.json();   
-        setHistoryData(data)
+        setHistoryData(Array.isArray(data) ? data : [])
       } 
 
       getData();
